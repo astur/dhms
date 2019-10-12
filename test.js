@@ -48,10 +48,10 @@ test('base', t => {
 test('complicated', t => {
     // ms
     t.is(dhms('1d2h30m45s123'), 95445123);
-    t.is(dhms('2h 30 m4 5s12 3'), dhms('2h 30 m4 5s12 3'));
+    t.is(dhms('2h 30 m4 5s12 3'), dhms('2h30m45s123'));
     t.is(dhms('1h1h1h'), dhms('3h'));
     // sec
     t.is(dhms('1d2h30m45s123', true), 95568);
-    t.is(dhms('2h 30 m4 5s12 3', true), dhms('2h 30 m4 5s12 3', true));
+    t.is(dhms('2h 30 m4 5s12 3', true), dhms('2h30m45s123', true));
     t.is(dhms('1h1h1h', true), dhms('3h', true));
 });
