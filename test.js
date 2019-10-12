@@ -1,7 +1,10 @@
 const test = require('ava');
-const m = require('.');
+const dhms = require('.');
 
-test('dhms', t => {
-    t.true(true);
-    t.is(m, m);
+test('base', t => {
+    t.is(dhms('123'), 123);
+    t.is(dhms('1s'), 1000);
+    t.is(dhms('1m'), 60000);
+    t.is(dhms('1h'), 3600000);
+    t.is(dhms('1d'), 86400000);
 });
