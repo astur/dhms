@@ -1,6 +1,6 @@
 # dhms
 
-Parses `dhms` string to number of milliseconds
+Parses `dhms` string to number of milliseconds or seconds
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
@@ -16,6 +16,7 @@ npm i dhms
 ```js
 const dhms = require('dhms');
 dhms('1d2h30m45s123'); // 95445123
+dhms('1d2h30m45s123', true); // 95568
 ```
 
 ## License
