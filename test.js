@@ -63,8 +63,8 @@ test('negative', t => {
     t.is(dhms('1h-30m'), dhms('30m'));
     t.is(dhms('1s-400'), dhms('600'));
     // sec
-    t.is(dhms('-123'), -123);
-    t.is(dhms('-1h'), -3600);
-    t.is(dhms('1h-30m'), dhms('30m'));
-    t.is(dhms('1m-40'), dhms('20'));
+    t.is(dhms('-123', true), -123);
+    t.is(dhms('-1h', true), -3600);
+    t.is(dhms('1h-30m', true), dhms('30m', true));
+    t.is(dhms('1m-40', true), dhms('20', true));
 });
