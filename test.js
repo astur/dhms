@@ -5,6 +5,14 @@ test('zero', t => {
     t.is(dhms('000'), 0);
     t.is(dhms('bad'), 0);
     t.is(dhms('dhms'), 0);
+    t.is(dhms('123x'), 0);
+    t.is(dhms(true), 0);
+    t.is(dhms(false), 0);
+    t.is(dhms(null), 0);
+    t.is(dhms(), 0);
+    t.is(dhms(0), 0);
+    t.is(dhms(123), 0);
+    t.is(dhms([123]), 0);
 });
 
 test('base', t => {
