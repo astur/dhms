@@ -55,3 +55,16 @@ test('complicated', t => {
     t.is(dhms('2h 30 m4 5s12 3', true), dhms('2h30m45s123', true));
     t.is(dhms('1h1h1h', true), dhms('3h', true));
 });
+
+test('negative', t => {
+    // ms
+    t.is(dhms('-123'), -123);
+    t.is(dhms('-1h'), -3600000);
+    t.is(dhms('1h-30m'), dhms('30m'));
+    t.is(dhms('1s-400'), dhms('600'));
+    // sec
+    t.is(dhms('-123'), -123);
+    t.is(dhms('-1h'), -3600);
+    t.is(dhms('1h-30m'), dhms('30m'));
+    t.is(dhms('1m-40'), dhms('20'));
+});
