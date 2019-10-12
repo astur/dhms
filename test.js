@@ -1,6 +1,12 @@
 const test = require('ava');
 const dhms = require('.');
 
+test('zero', t => {
+    t.is(dhms('000'), 0);
+    t.is(dhms('bad'), 0);
+    t.is(dhms('dhms'), 0);
+});
+
 test('base', t => {
     t.is(dhms('123'), 123);
     t.is(dhms('1s'), 1000);
