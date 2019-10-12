@@ -1,8 +1,7 @@
 {
-  "private": true,
   "name": "dhms",
   "version": "0.0.1",
-  "description": "",
+  "description": "Parses `dhms` string to number of milliseconds",
   "main": "index.js",
   "author": "astur <astur@yandex.ru> (http://kozlov.am/)",
   "scripts": {
@@ -22,7 +21,11 @@
     "nyc": "^14.1.1"
   },
   "keywords": [
-    "dhms"
+    "dhms",
+    "milliseconds",
+    "time",
+    "parse",
+    "parser"
   ],
   "license": "MIT"
 }
