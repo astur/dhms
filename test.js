@@ -8,3 +8,7 @@ test('base', t => {
     t.is(dhms('1h'), 3600000);
     t.is(dhms('1d'), 86400000);
 });
+
+test('complicated', t => {
+    t.is(dhms('1d2h30m45s123'), 95445123);
+});
