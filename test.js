@@ -26,4 +26,6 @@ test('base', t => {
 
 test('complicated', t => {
     t.is(dhms('1d2h30m45s123'), 95445123);
+    t.is(dhms('2h 30 m4 5s12 3'), dhms('2h 30 m4 5s12 3'));
+    t.is(dhms('1h1h1h'), dhms('3h'));
 });
